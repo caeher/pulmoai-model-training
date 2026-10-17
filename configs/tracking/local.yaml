@@ -1,0 +1,5 @@
+tracking:
+  backend: auto          # mlflow if installed, else local JSON
+  experiment: pulmoai-legacy-cxr
+  output_dir: mlruns
+  wandb_enabled: false   # opt-in only; also requires RXDL_ALLOW_WANDB=1

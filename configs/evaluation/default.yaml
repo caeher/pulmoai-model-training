@@ -1,0 +1,5 @@
+evaluation:
+  split: validation
+  metrics: [auroc, auprc, ece]
+  selection_metric: auroc
+  output_dir: reports

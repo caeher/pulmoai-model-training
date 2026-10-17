@@ -1,0 +1,9 @@
+# Preserved CXR configuration only. No CXR training/model implementation exists.
+schema_version: 1
+defaults:
+  - data: nih_baseline
+  - model: densenet121_xrv
+  - train: baseline
+  - evaluation: default
+  - seeds: default
+  - tracking: local

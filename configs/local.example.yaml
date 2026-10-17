@@ -1,0 +1,6 @@
+# Copy to configs/local.yaml (gitignored). Machine-specific paths and credentials.
+# Never merged into the experiment config nor logged by the tracker.
+data_root: D:/datasets/luna16
+weights_root: D:/weights
+physionet_username: ""
+wandb_api_key: ""

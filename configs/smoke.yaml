@@ -1,0 +1,17 @@
+schema_version: 2
+data:
+  dataset: synthetic
+  version: synthetic-v1
+  patch_size: 16
+  patches_per_scan: 2
+model:
+  base_channels: 2
+train:
+  epochs: 2
+  batch_size: 2
+  device: cpu
+  amp: false
+  num_workers: 0
+evaluation:
+  max_candidates: 20
+  bootstrap_samples: 10

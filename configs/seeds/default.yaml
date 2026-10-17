@@ -1,0 +1,4 @@
+seeds:
+  global_seed: 42
+  deterministic: true
+  split_seed: 1234

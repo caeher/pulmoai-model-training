@@ -1,0 +1,6 @@
+model:
+  name: densenet121
+  num_classes: 8
+  pretrained: torchxrayvision/densenet121-res224-all   # identifier only; nothing is downloaded here
+  weights_path: null
+  dropout: 0.0

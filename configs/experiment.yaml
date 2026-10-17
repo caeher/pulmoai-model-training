@@ -1,0 +1,44 @@
+# PulmoAI CT baseline. No downloads, private paths, or pretrained weights.
+schema_version: 2
+data:
+  dataset: luna16
+  version: user-verified-release
+  spacing_xyz: [1.0, 1.0, 1.0]
+  hu_window: [-1000.0, 400.0]
+  patch_size: 32
+  patches_per_scan: 8
+  positive_fraction: 0.5
+  flip_probability: 0.5
+  split_fractions: [0.7, 0.15, 0.15]
+model:
+  name: small_unet3d
+  base_channels: 8
+train:
+  epochs: 20
+  batch_size: 2
+  lr: 0.001
+  weight_decay: 0.00001
+  grad_accum_steps: 1
+  num_workers: 0
+  amp: true
+  device: auto
+  patience: 5
+  positive_weight: 10.0
+  cpu_threads: 2
+evaluation:
+  score_threshold: 0.1
+  operating_threshold: 0.5
+  nms_distance_mm: 5.0
+  max_candidates: 300
+  overlap: 0.5
+  fp_rates: [0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]
+  bootstrap_samples: 200
+seeds:
+  global_seed: 42
+  deterministic: true
+  split_seed: 1234
+tracking:
+  backend: json
+  experiment: pulmoai-model-training
+  output_dir: tracking
+  wandb_enabled: false

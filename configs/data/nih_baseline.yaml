@@ -1,0 +1,16 @@
+data:
+  dataset: nih_chestxray14
+  # Class order defines model output order. Never reorder without bumping schema_version.
+  classes: [Atelectasis, Cardiomegaly, Consolidation, Edema, Effusion, Pneumonia, Pneumothorax, No_Finding]
+  split_manifest: manifests/nih_splits.csv   # relative to data_root in local.yaml
+  allow_download: false
+  view_positions: [PA, AP]
+  preprocessing:
+    image_size: 224
+    channels: 1
+    interpolation: bilinear
+    normalization: xrv
+    mean: []
+    std: []
+    center_crop: true
+    clahe: false
